@@ -178,6 +178,10 @@ RUN echo "Sys.setenv(http_proxy = 'my-proxy-url')" >> /usr/lib/rstudio-server/R/
 RUN echo "Sys.setenv(https_proxy = 'my-proxy-url')" >> /usr/lib/rstudio-server/R/ServerOptions.R
 ```
 
+## Jenkins
+
+The configuration file for Jenkins service is located at `/etc/sysconfig/jenkins`.
+
 ## Packages
 
 **Python**
@@ -271,3 +275,5 @@ $ tlmgr --usermode install [pkgname]
 * [Julia](http://julialang.org/)
 
 * [Gambit Scheme](http://gambitscheme.org)
+
+* [Jenkins](https://jenkins.io)
