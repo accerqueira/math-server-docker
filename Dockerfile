@@ -503,7 +503,8 @@ ENV MEMCACHE_MIN_ALLOC_SIZE 10
 
 # 8787 for RStudio
 # 8000 for Jupyter
-EXPOSE 8787 8000
+# 8080 for Jenkins
+EXPOSE 8787 8000 8080
 
 ADD jupyterhub_config.py jupyterhub_config.py
 

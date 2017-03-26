@@ -70,7 +70,7 @@ Be patient. It may take up to 8 hours to complete.
 After the build is complete, you can start the server with:
 
 ```
-# docker run -d -p 8787:8787 -p 8000:8000 --name ms1 math-server
+# docker run -d -p 8787:8787 -p 8000:8000 -p 8080:8080 --name ms1 math-server
 ```
 
 With a running container, you can go ahead and create users:
@@ -85,6 +85,8 @@ The default ports are:
 * `8787` for RStudio
 
 * `8000` for Jupyter
+
+* `8080` for Jenkins
 
 ## Requirements
 
