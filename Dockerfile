@@ -482,6 +482,17 @@ RUN python2 ./libs/update_pkgs.py 2
 RUN python3 ./libs/update_pkgs.py 3
 
 ####################
+## CI
+####################
+
+# Jenkins
+# https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Red+Hat+distributions
+RUN wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
+RUN rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
+RUN yum install jenkins
+
+
+####################
 ## Services
 ####################
 
