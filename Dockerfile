@@ -434,9 +434,9 @@ RUN conda install plotly
 ADD libs libs
 
 # Install packages
-RUN cd libs && source ./libs_python2.sh
+#RUN cd libs && source ./libs_python2.sh
 
-RUN cd libs && source ./libs_python3.sh
+#RUN cd libs && source ./libs_python3.sh
 
 RUN cd libs && source ./libs_R.sh
 
