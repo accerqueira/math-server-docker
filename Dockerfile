@@ -280,6 +280,10 @@ RUN cp -r /usr/lib64/R/library/IRkernel/kernelspec /usr/local/conda/anaconda3/sh
 
 # Optional configuration file for svn
 ADD svn-servers /etc/subversion/servers
+RUN sed -i \
+      -e "s/{{HTTP_PROXY_HOST}}/$(echo $http_proxy | grep -Po '(?<=//)([^:/])+')/" \
+      -e "s/{{HTTP_PROXY_PORT}}/$(echo $http_proxy | grep -Po '(?<=:)([^:/])+')/" \
+      /etc/subversion/servers
 
 # coin SYMPHONY
 # https://projects.coin-or.org/SYMPHONY
